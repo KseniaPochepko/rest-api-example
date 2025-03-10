@@ -1,0 +1,28 @@
+openapi: 3.0.4
+info:
+  title: REST API Example
+  description: REST API created for educational purposes
+  version: 1.0.0
+
+paths:
+  /auth/login:
+    post:
+      summary: Authorizes user with email and password
+      description:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/auth/login"
+
+components:
+  schemas:
+    auth/login:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+
