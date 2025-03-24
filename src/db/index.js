@@ -4,7 +4,6 @@ import * as models from './models';
 
 const sequelize = new Sequelize({
   ...config.db,
-  dialect: 'postgres',
   logging: false,
   underscored: true,
   timestamp: true,
