@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon",
+    "build": "babel src -s -D -d dist",
+    "start": "node dist/index -r dotenv/config",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
